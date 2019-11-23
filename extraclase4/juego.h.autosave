@@ -1,0 +1,49 @@
+#ifndef JUEGO_H
+#define JUEGO_H
+
+
+#include "gladiador.h"
+#include "cuadricula.h"
+#include "astar.h"
+
+
+/**
+ * Header de Juego
+ *
+ * @since 30/04/17
+ */
+
+/**
+ * Constructor de Juego;;
+ */
+
+class Juego {
+private:
+
+    Cuadricula* cuadricula;
+    AStar* aStarAlgorithm;
+    Node* nodoInicio;
+    Node* nodoFinal;
+    Gladiador* gladiador1;
+
+
+public:
+
+    ///Constructor
+    Juego();
+
+    ///Metodos
+    void doAStar();
+    void generateTowers(int ctt);
+
+    ///Getters & Setters
+    Cuadricula* getCuadricula();
+    void setCuadricula(Cuadricula* _cuadricula);
+    AStar* getAStarAlgorithm();
+    void setAStarAlgorithm(AStar* _aStarAlgorithm);
+    Gladiador* getGladiador1();
+    void setGladiador1(Gladiador* _gladiador1);
+
+};
+
+#endif // JUEGO_H
